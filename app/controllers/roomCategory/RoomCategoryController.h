@@ -3,22 +3,23 @@
 #include "crow.h"
 #include "../../models/RoomCategory.h" 
 #include "../../repositories/GenericRepository.h"
+#include "../../middleware/CorsMiddleware.h"
 
 class RoomCategoryController {
 public:
-    RoomCategoryController(
-        crow::SimpleApp& app,
-        GenericRepository<RoomCategory>& repo
-    )
-        : m_app(app), m_repo(repo)
-    {
-        registerRoutes();
-    }
+	RoomCategoryController(
+		crow::App<CorsMiddleware>& app,
+		GenericRepository<RoomCategory>& repo
+	)
+		: m_app(app), m_repo(repo)
+	{
+		registerRoutes();
+	}
 
 private:
-    void registerRoutes();
+	void registerRoutes();
 
-    crow::SimpleApp& m_app;
+	crow::App<CorsMiddleware>& m_app;
 
-    GenericRepository<RoomCategory>& m_repo;
+	GenericRepository<RoomCategory>& m_repo;
 };

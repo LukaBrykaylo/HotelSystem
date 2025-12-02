@@ -1,26 +1,39 @@
 #pragma once
+
 #include "../models/Booking.h"
 #include <vector>
 #include <memory>
+#include <pqxx/pqxx>
 
 class BookingRepository {
 public:
-    BookingRepository() = default;
+	BookingRepository() = default;
 
-    // Отримує бронювання разом з усіма його послугами
-    std::unique_ptr<Booking> getBookingById(int bookingId);
+	std::unique_ptr<Booking> getBookingById(int bookingId);
+	std::vector<Booking> getAllBookings();
+	std::vector<Booking> getAllBookingsByUserId(int userId);
 
-    std::unique_ptr<Booking> createBooking(
-        pqxx::work& T, // Приймає транзакцію, щоб не комітити зарано
-        int userId,
-        int roomId,
-        const std::string& checkIn,
-        const std::string& checkOut,
-        double totalCost
-    );
+	pqxx::result getAllBookingDetails();
 
-    // Отримує всі бронювання (але БЕЗ послуг, для економії)
-    std::vector<Booking> getAllBookings();
+	std::unique_ptr<Booking> createBooking(
+		pqxx::work& T, int userId, int roomId,
+		const std::string& checkIn, const std::string& checkOut, double totalCost
+	);
 
-    // ... Тут згодом буде createBooking, updateBooking...
+	std::unique_ptr<Booking> adminCreateBooking(
+		pqxx::work& T,
+		int userId, int roomId, const std::string& checkIn,
+		const std::string& checkOut, double totalCost, const std::string& status
+	);
+
+	std::unique_ptr<Booking> adminUpdateBooking(
+		pqxx::work& T,
+		int bookingId, int userId, int roomId, const std::string& checkIn,
+		const std::string& checkOut, double totalCost, const std::string& status
+	);
+
+	bool deleteBooking(int bookingId);
+
+	void updateStatus(pqxx::work& T, int bookingId, const std::string& status);
+	void updateDateAndCost(pqxx::work& T, int bookingId, const std::string& newCheckOut, double newTotalCost);
 };

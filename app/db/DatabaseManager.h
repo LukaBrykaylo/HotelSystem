@@ -1,24 +1,23 @@
 #pragma once
 
 #include <string>
-#include <memory>   
-#include <pqxx/pqxx>  
+#include <memory>
+#include <pqxx/pqxx>
 
 class DatabaseManager {
 public:
-    static DatabaseManager& getInstance();
+	DatabaseManager(const DatabaseManager&) = delete;
+	DatabaseManager& operator=(const DatabaseManager&) = delete;
 
-    void init(const std::string& connectionString);
+	static DatabaseManager& getInstance();
 
-    pqxx::connection& getConnection();
+	void init(const std::string& connectionString);
 
-    DatabaseManager(const DatabaseManager&) = delete;
-    DatabaseManager& operator=(const DatabaseManager&) = delete;
+	const std::string& getConnectionString() const;
 
 private:
-    DatabaseManager() = default;
+	DatabaseManager() = default;
 
-    std::string m_connectionString;
+	std::string m_connectionString;
 
-    std::unique_ptr<pqxx::connection> m_connection;
 };

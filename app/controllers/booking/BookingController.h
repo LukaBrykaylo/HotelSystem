@@ -1,14 +1,14 @@
 #pragma once
 #include "crow.h"
-#include "../../services/BookingService.h" // <-- Правильна залежність
+#include "../../services/BookingService.h" 
+#include "../../middleware/CorsMiddleware.h"
 
 class BookingController {
 public:
-    // Конструктор тепер приймає BookingService
-    BookingController(crow::SimpleApp& app, BookingService& service);
+    BookingController(crow::App<CorsMiddleware>& app, BookingService& service);
 
 private:
     void registerRoutes();
-    crow::SimpleApp& m_app;
-    BookingService& m_service; // <-- Правильна залежність
+    crow::App<CorsMiddleware>& m_app;
+    BookingService& m_service;
 };

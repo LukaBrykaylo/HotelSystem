@@ -46,11 +46,17 @@
     <Filter Include="app\controllers\booking">
       <UniqueIdentifier>{d24d5861-5d41-4ac3-851c-66413ae625cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="app\middleware">
+      <UniqueIdentifier>{36364a09-dbf3-4bfb-b3ab-fa6779cd8468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\amenity">
+      <UniqueIdentifier>{bd72539c-fd1c-443e-a4a0-9a6a351b7fbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\reports">
+      <UniqueIdentifier>{36138444-59c0-4ac8-aaaf-62b1ba23b6fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="app\db\DatabaseManager.cpp">
       <Filter>app\db</Filter>
     </ClCompile>
@@ -77,6 +83,18 @@
     </ClCompile>
     <ClCompile Include="app\services\BookingService.cpp">
       <Filter>app\services</Filter>
+    </ClCompile>
+    <ClCompile Include="app\repositories\RoomRepository.cpp">
+      <Filter>app\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\amenity\AmenityController.cpp">
+      <Filter>app\controllers\amenity</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\reports\ReportController.cpp">
+      <Filter>app\controllers\reports</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +151,21 @@
     </ClInclude>
     <ClInclude Include="app\services\BookingService.h">
       <Filter>app\services</Filter>
+    </ClInclude>
+    <ClInclude Include="app\middleware\CorsMiddleware.h">
+      <Filter>app\middleware</Filter>
+    </ClInclude>
+    <ClInclude Include="app\repositories\RoomRepository.h">
+      <Filter>app\repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Amenity.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\amenity\AmenityController.h">
+      <Filter>app\controllers\amenity</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\reports\ReportController.h">
+      <Filter>app\controllers\reports</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

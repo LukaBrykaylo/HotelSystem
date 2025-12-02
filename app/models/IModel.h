@@ -3,7 +3,7 @@
 
 class IModel {
 public:
-    virtual void from_row(const pqxx::row& row) = 0;
+	virtual void from_row(const pqxx::row& row) = 0;
 
-    virtual ~IModel() = default;
+	virtual ~IModel() = default;
 };

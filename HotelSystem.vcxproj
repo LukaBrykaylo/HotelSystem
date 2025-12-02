@@ -127,25 +127,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="app\controllers\amenity\AmenityController.cpp" />
     <ClCompile Include="app\controllers\booking\BookingController.cpp" />
+    <ClCompile Include="app\controllers\reports\ReportController.cpp" />
     <ClCompile Include="app\controllers\roomCategory\RoomCategoryController.cpp" />
     <ClCompile Include="app\controllers\room\RoomController.cpp" />
     <ClCompile Include="app\controllers\service\ServiceController.cpp" />
     <ClCompile Include="app\controllers\user\UserController.cpp" />
     <ClCompile Include="app\db\DatabaseManager.cpp" />
     <ClCompile Include="app\repositories\BookingRepository.cpp" />
+    <ClCompile Include="app\repositories\RoomRepository.cpp" />
     <ClCompile Include="app\repositories\UserRepository.cpp" />
     <ClCompile Include="app\services\BookingService.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="app\controllers\amenity\AmenityController.h" />
     <ClInclude Include="app\controllers\booking\BookingController.h" />
+    <ClInclude Include="app\controllers\reports\ReportController.h" />
     <ClInclude Include="app\controllers\roomCategory\RoomCategoryController.h" />
     <ClInclude Include="app\controllers\room\RoomController.h" />
     <ClInclude Include="app\controllers\service\ServiceController.h" />
     <ClInclude Include="app\controllers\user\UserController.h" />
     <ClInclude Include="app\db\DatabaseManager.h" />
+    <ClInclude Include="app\middleware\CorsMiddleware.h" />
     <ClInclude Include="app\models\Administrator.h" />
+    <ClInclude Include="app\models\Amenity.h" />
     <ClInclude Include="app\models\Booking.h" />
     <ClInclude Include="app\models\Guest.h" />
     <ClInclude Include="app\models\IModel.h" />
@@ -155,6 +162,7 @@
     <ClInclude Include="app\models\User.h" />
     <ClInclude Include="app\repositories\BookingRepository.h" />
     <ClInclude Include="app\repositories\GenericRepository.h" />
+    <ClInclude Include="app\repositories\RoomRepository.h" />
     <ClInclude Include="app\repositories\UserRepository.h" />
     <ClInclude Include="app\services\BookingService.h" />
   </ItemGroup>
