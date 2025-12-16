@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{47dcc204-486d-49d8-8fb9-6761d05cfd5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\models">
+      <UniqueIdentifier>{b73cb5a1-e331-49bb-b2dc-7d462231350a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\db">
+      <UniqueIdentifier>{50fa0c66-fa74-47d6-8085-f0c622bbba7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers">
+      <UniqueIdentifier>{a3cc1b8a-745a-46b7-9cb0-79559871bd1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\repositories">
+      <UniqueIdentifier>{132b2bb9-04ca-4d99-b3e3-2811f2ae4830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\services">
+      <UniqueIdentifier>{8a73568d-a031-40cd-bf67-3b4c16d32fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\roomCategory">
+      <UniqueIdentifier>{ae3d2cd3-31d3-4b75-8001-7af59a2a4028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\room">
+      <UniqueIdentifier>{2e159327-38f6-40d8-a56e-6e79be2135a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\user">
+      <UniqueIdentifier>{e0c000a2-7457-48dd-ae6d-dd00f9632517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\service">
+      <UniqueIdentifier>{a2e5af09-cbe9-450c-9b80-7d0cc8c0fddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\booking">
+      <UniqueIdentifier>{d24d5861-5d41-4ac3-851c-66413ae625cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\middleware">
+      <UniqueIdentifier>{36364a09-dbf3-4bfb-b3ab-fa6779cd8468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\amenity">
+      <UniqueIdentifier>{bd72539c-fd1c-443e-a4a0-9a6a351b7fbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\controllers\reports">
+      <UniqueIdentifier>{36138444-59c0-4ac8-aaaf-62b1ba23b6fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="app\db\DatabaseManager.cpp">
+      <Filter>app\db</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\roomCategory\RoomCategoryController.cpp">
+      <Filter>app\controllers\roomCategory</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\room\RoomController.cpp">
+      <Filter>app\controllers\room</Filter>
+    </ClCompile>
+    <ClCompile Include="app\repositories\UserRepository.cpp">
+      <Filter>app\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\user\UserController.cpp">
+      <Filter>app\controllers\user</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\service\ServiceController.cpp">
+      <Filter>app\controllers\service</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\booking\BookingController.cpp">
+      <Filter>app\controllers\booking</Filter>
+    </ClCompile>
+    <ClCompile Include="app\repositories\BookingRepository.cpp">
+      <Filter>app\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="app\services\BookingService.cpp">
+      <Filter>app\services</Filter>
+    </ClCompile>
+    <ClCompile Include="app\repositories\RoomRepository.cpp">
+      <Filter>app\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\amenity\AmenityController.cpp">
+      <Filter>app\controllers\amenity</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="app\controllers\reports\ReportController.cpp">
+      <Filter>app\controllers\reports</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app\models\RoomCategory.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\db\DatabaseManager.h">
+      <Filter>app\db</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\IModel.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\repositories\GenericRepository.h">
+      <Filter>app\repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\roomCategory\RoomCategoryController.h">
+      <Filter>app\controllers\roomCategory</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Room.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\room\RoomController.h">
+      <Filter>app\controllers\room</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\User.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Guest.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Administrator.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\repositories\UserRepository.h">
+      <Filter>app\repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\user\UserController.h">
+      <Filter>app\controllers\user</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Service.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Booking.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\service\ServiceController.h">
+      <Filter>app\controllers\service</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\booking\BookingController.h">
+      <Filter>app\controllers\booking</Filter>
+    </ClInclude>
+    <ClInclude Include="app\repositories\BookingRepository.h">
+      <Filter>app\repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="app\services\BookingService.h">
+      <Filter>app\services</Filter>
+    </ClInclude>
+    <ClInclude Include="app\middleware\CorsMiddleware.h">
+      <Filter>app\middleware</Filter>
+    </ClInclude>
+    <ClInclude Include="app\repositories\RoomRepository.h">
+      <Filter>app\repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="app\models\Amenity.h">
+      <Filter>app\models</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\amenity\AmenityController.h">
+      <Filter>app\controllers\amenity</Filter>
+    </ClInclude>
+    <ClInclude Include="app\controllers\reports\ReportController.h">
+      <Filter>app\controllers\reports</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
